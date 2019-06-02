@@ -24,6 +24,7 @@ wheels/
 .installed.cfg
 *.egg
 MANIFEST
+data*/*
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -102,3 +103,29 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# custom
+test_mercury.py
+*._*.py
+Logs*/*
+jupyter-notebook*/*
+Model*/*
+all_scalars.json
+nlgeval*/*
+samplebeam.py
+Generations*/*
+
+# tex
+.history
+*.aux
+*.out
+*.log
+*.synctex.gz
+*~
+*.pdf
+*.blg
+*.dvi
+*.bbl
+.DS_Store
+*.fdb_latexmk
+*.fls
