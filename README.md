@@ -15,10 +15,14 @@ Source code for [NAACL 2019](https://naacl2019.org/) paper: [Submodular optimiza
 
 ### Dataset
 
-- Quora
-- Twitter
+Download the following datasets:
 
-Download [GoogleNews-vectors-negative300.bin.gz](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?usp=sharing) into the `data` directory. In case the above link doesn't work, find the zip file [here](https://code.google.com/archive/p/word2vec/)
+- [Quora](https://indianinstituteofscience-my.sharepoint.com/:u:/g/personal/ashutosh_iisc_ac_in/EeQ9jevrqJNNnFNsjKQR9VYBlePoAuZN2CSXobyXzCA0ew?e=9Vn0yw)
+- [Twitter](https://indianinstituteofscience-my.sharepoint.com/:u:/g/personal/ashutosh_iisc_ac_in/EZe7CE3Ip0NOvBYAEjYR5RcBMyG-SjKeMI-XC6-njZrLGQ?e=gyDdGf)
+
+and place them in the `data` directory
+
+- Download [GoogleNews-vectors-negative300.bin.gz](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?usp=sharing) into the `data` directory. In case the above link doesn't work, find the zip file [here](https://code.google.com/archive/p/word2vec/)
 
 ## Setup:
 
@@ -73,6 +77,8 @@ To use pretrained `word2vec` embeddings -
 ```
 python -m src.create_dict -model pretrained -run_name <run_name> -gpu 0
 ```
+
+This will generate the `word2vec.pickle` file in `data/embeddings`
 
 ### Decoding using submodularity
 
