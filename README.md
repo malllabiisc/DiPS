@@ -20,7 +20,8 @@ Download the following datasets:
 - [Quora](https://indianinstituteofscience-my.sharepoint.com/:u:/g/personal/ashutosh_iisc_ac_in/EeQ9jevrqJNNnFNsjKQR9VYBlePoAuZN2CSXobyXzCA0ew?e=9Vn0yw)
 - [Twitter](https://indianinstituteofscience-my.sharepoint.com/:u:/g/personal/ashutosh_iisc_ac_in/EZe7CE3Ip0NOvBYAEjYR5RcBMyG-SjKeMI-XC6-njZrLGQ?e=gyDdGf)
 
-and place them in the `data` directory
+Extract and place them in the `data` directory. Path : `data/<dataset-folder-name>`. 
+A sample dataset folder might look like `data/quora/<train/test/val>/<src.txt/tgt.txt>`.
 
 - Download [GoogleNews-vectors-negative300.bin.gz](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?usp=sharing) into the `data` directory. In case the above link doesn't work, find the zip file [here](https://code.google.com/archive/p/word2vec/)
 
