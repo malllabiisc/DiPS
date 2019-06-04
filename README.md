@@ -3,10 +3,10 @@
 Source code for [NAACL 2019](https://naacl2019.org/) paper: [Submodular optimization-based diverse paraphrasing and its effectiveness in data augmentation](https://www.aclweb.org/anthology/N19-1363)
 
 <p align="center">
-  <img align="center" src="https://github.com/malllabiisc/DiPS/blob/master/images/dips_model.png" alt="...">
+  <img align="center" src="https://github.com/malllabiisc/DiPS/blob/master/images/dips_model.png" alt="Image" height="420" >
 </p>
 
-* Overview of DiPS during decoding to generate k paraphrases. At each time step, a set of N sequences V<sup>t</sup> is used to determine k &lt; N sequences (X<sup>∗</sup>) via submodular maximization . The above figure illustrates the motivation behind each submodular component. Please see Section 4 in the paper for details.
+- Overview of DiPS during decoding to generate k paraphrases. At each time step, a set of N sequences V<sup>(t)</sup> is used to determine k &lt; N sequences (X<sup>∗</sup>) via submodular maximization . The above figure illustrates the motivation behind each submodular component. Please see Section 4 in the paper for details.
 
 ### Dependencies
 
@@ -14,21 +14,61 @@ Source code for [NAACL 2019](https://naacl2019.org/) paper: [Submodular optimiza
 - dependencies can be installed using `requirements.txt`
 
 ### Dataset
+
 - Quora
 - Twitter
 
+## Setup:
+
+To get the project's source code, clone the github repository:
+
+```shell
+$ git clone https://github.com/malllabiisc/DiPS
+```
+
+Install VirtualEnv using the following (optional):
+
+```shell
+$ [sudo] pip install virtualenv
+```
+
+Create and activate your virtual environment (optional):
+
+```shell
+$ virtualenv -p python3 venv
+$ source venv/bin/activate
+```
+
+Install all the required packages:
+
+```shell
+$ pip install -r requirements.txt
+```
+
+Install the submodopt package by running the following command from the root directory of the repository:
+
+```shell
+$ cd ./packages/submodopt
+$ python setup.py install
+$ cd ../../
+```
+
 ### Training
+
 ```
 python -m src.main -mode train -gpu 0 -use_attn -bidirectional
 ```
 
 ### Decoding
+
 ```
 python -m src.main -mode decode -selec submod -run_name <run_name> -beam_width 10 -gpu 0
 ```
 
 ### Citation
+
 Please cite the following paper if you find this work relevant to your application
+
 ```tex
 @inproceedings{dips2019,
     title = "Submodular Optimization-based Diverse Paraphrasing and its Effectiveness in Data Augmentation",
