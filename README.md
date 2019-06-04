@@ -61,7 +61,7 @@ $ cd ../../
 python -m src.main -mode train -gpu 0 -use_attn -bidirectional -dataset quora -run_name <run_name>
 ```
 
-### Create dictionary for submodular subset selection. Used for Semantic similarity (L<sub>2<\sub>)
+### Create dictionary for submodular subset selection. Used for Semantic similarity (L<sub>2</sub>)
   
 To use trained embeddings - 
 ```
