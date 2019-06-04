@@ -18,6 +18,8 @@ Source code for [NAACL 2019](https://naacl2019.org/) paper: [Submodular optimiza
 - Quora
 - Twitter
 
+Download [GoogleNews-vectors-negative300.bin.gz](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?usp=sharing) into the `data` directory. In case the above link doesn't work, find the zip file [here](https://code.google.com/archive/p/word2vec/)
+
 ## Setup:
 
 To get the project's source code, clone the github repository:
@@ -53,13 +55,26 @@ $ python setup.py install
 $ cd ../../
 ```
 
-### Training
+### Training the sequence to sequence model
 
 ```
-python -m src.main -mode train -gpu 0 -use_attn -bidirectional
+python -m src.main -mode train -gpu 0 -use_attn -bidirectional -dataset quora -run_name <run_name>
 ```
 
-### Decoding
+### Create dictionary for submodular subset selection. Used for Semantic similarity (L<sub>2<\sub>)
+  
+To use trained embeddings - 
+```
+python -m src.create_dict -model trained -run_name <run_name> -gpu 0
+```
+
+To use pretrained `word2vec` embeddings - 
+
+```
+python -m src.create_dict -model pretrained -run_name <run_name> -gpu 0
+```
+
+### Decoding using submodularity
 
 ```
 python -m src.main -mode decode -selec submod -run_name <run_name> -beam_width 10 -gpu 0
