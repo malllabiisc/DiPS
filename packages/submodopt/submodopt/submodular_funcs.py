@@ -17,16 +17,19 @@ from numpy.linalg import norm
 ########################################### RBF QUALITY FUNCTION ####################################################
 
 embedding_path = os.path.join('data', 'embeddings', 'word2vec.pickle')
+model = None
 
-print('Loading Word2Vec')
-st_time = time()
+if os.path.exists(embedding_path):
+    print('Loading Word2Vec')
+    st_time = time()
 
-with open(embedding_path, 'rb') as f:
-    model = pickle.load(f)
+    with open(embedding_path, 'rb') as f:
+        model = pickle.load(f)
 
-print('Word2vec Loaded')
-etime = (time() - st_time)/60.0
-print('Time Taken : {}'.format(etime))
+    print('Word2vec Loaded')
+    etime = (time() - st_time)/60.0
+    print('Time Taken : {}'.format(etime))
+    
 cos_sim = lambda a,b: dot(a, b)/(norm(a)*norm(b))
 rbf = lambda a,b, sigma : scipy.exp(-(np.sum( (a-b)**2 ) )/ sigma ** 2)
 
