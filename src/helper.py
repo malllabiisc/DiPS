@@ -78,6 +78,7 @@ def load_checkpoint(model, mode, file_path, logger, device):
     train_loss = None
     val_loss = None
     voc = None
+    bleu_score = None
     try:
         checkpoint = torch.load(file_path,
                                 map_location=lambda storage,
