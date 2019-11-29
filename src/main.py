@@ -294,11 +294,11 @@ def decode_beam(model, test_dataloader,  voc, device, args, logger, smethod, dat
     param_str= '_'.join(param_str)
 
     if smethod == 'submod':
-        res_save_path= os.path.join('Output', 'results_{}_{}_{}_{}',format(smethod, data_sub, args.slam, param_str))
-        fres_save_path= os.path.join('Output', 'fres_{}_{}_{}_{}',format(smethod, data_sub, args.slam, param_str))
+        res_save_path= os.path.join('Output', 'results_{}_{}_{}_{}'.format(smethod, data_sub, args.slam, param_str))
+        fres_save_path= os.path.join('Output', 'fres_{}_{}_{}_{}'.format(smethod, data_sub, args.slam, param_str))
     else:
-        res_save_path= os.path.join('Output', 'results_{}_{}',format(smethod, data_sub))
-        fres_save_path= os.path.join('Output', 'fres_{}_{}',format(smethod, data_sub))
+        res_save_path= os.path.join('Output', 'results_{}_{}'.format(smethod, data_sub))
+        fres_save_path= os.path.join('Output', 'fres_{}_{}'.format(smethod, data_sub))
 
     np.save(res_save_path, all_results)
     np.save(fres_save_path, final_res)
