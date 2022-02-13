@@ -8,6 +8,10 @@ Source code for [NAACL 2019](https://naacl2019.org/) paper: [Submodular optimiza
 
 - Overview of DiPS during decoding to generate k paraphrases. At each time step, a set of N sequences V<sup>(t)</sup> is used to determine k &lt; N sequences (X<sup>∗</sup>) via submodular maximization . The above figure illustrates the motivation behind each submodular component. Please see Section 4 in the paper for details.
 
+### Also on GEM/NL-Augmenter 🦎 → 🐍
+
+- Please use/check `diverse_paraphrase` in NL-Augmenter for the transformer-model version. [Diverse-Paraphrase: NL-Augmenter](https://github.com/GEM-benchmark/NL-Augmenter/tree/main/transformations/diverse_paraphrase).
+
 ### Dependencies
 
 - compatible with python 3.6
