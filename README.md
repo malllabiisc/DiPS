@@ -10,7 +10,7 @@ Source code for [NAACL 2019](https://naacl2019.org/) paper: [Submodular optimiza
 
 ### Also on GEM/NL-Augmenter 🦎 → 🐍
 
-- Please use/check `diverse_paraphrase` in NL-Augmenter for the transformer-model version. [Diverse-Paraphrase: NL-Augmenter](https://github.com/GEM-benchmark/NL-Augmenter/tree/main/transformations/diverse_paraphrase).
+- Please use/check `diverse_paraphrase` in NL-Augmenter for the transformer-model version. [Diverse-Paraphrase: NL-Augmenter](https://github.com/GEM-benchmark/NL-Augmenter/tree/main/nlaugmenter/transformations/diverse_paraphrase).
 
 ### Dependencies
 
