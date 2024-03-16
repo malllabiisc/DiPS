@@ -21,8 +21,8 @@ Source code for [NAACL 2019](https://naacl2019.org/) paper: [Submodular optimiza
 
 Download the following datasets:
 
-- [Quora](https://indianinstituteofscience-my.sharepoint.com/:u:/g/personal/ashutosh_iisc_ac_in/EeQ9jevrqJNNnFNsjKQR9VYBlePoAuZN2CSXobyXzCA0ew?e=9Vn0yw)
-- [Twitter](https://indianinstituteofscience-my.sharepoint.com/:u:/g/personal/ashutosh_iisc_ac_in/EZe7CE3Ip0NOvBYAEjYR5RcBMyG-SjKeMI-XC6-njZrLGQ?e=gyDdGf)
+- [Quora](https://drive.google.com/file/d/1le5Oa1tBWJKY0ThVs9Je9B1jhOGe-PYC/view?usp=sharing)
+- [Twitter](https://drive.google.com/file/d/1uc16IoQgjujFKlH97rY3PBebhHRWHGaH/view?usp=sharing)
 
 Extract and place them in the `data` directory. Path : `data/<dataset-folder-name>`. 
 A sample dataset folder might look like `data/quora/<train/test/val>/<src.txt/tgt.txt>`.
